@@ -512,6 +512,85 @@ font-size:15px;
 }
 
 }
+    .product{
+cursor:pointer;
+}
+
+.product .add{
+cursor:pointer;
+}
+
+.product-modal-content{
+display:grid;
+grid-template-columns:220px 1fr;
+gap:25px;
+align-items:start;
+}
+
+.product-modal-cover{
+width:100%;
+height:300px;
+background:#e4d0b6;
+border-radius:15px;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.product-modal-cover img{
+width:100%;
+height:100%;
+object-fit:contain;
+}
+
+.product-details h2{
+font-size:25px;
+margin-bottom:10px;
+}
+
+.product-details .desc{
+line-height:2;
+color:#6b5748;
+margin:15px 0;
+}
+
+.product-actions{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+
+.product-actions button{
+flex:1;
+border:0;
+padding:13px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.buy-now{
+background:#d7b58e;
+color:#3b2920;
+}
+
+.product-add{
+background:#4b3427;
+color:white;
+}
+
+@media(max-width:600px){
+
+.product-modal-content{
+grid-template-columns:1fr;
+}
+
+.product-modal-cover{
+height:260px;
+}
+
+    }
 </style>
 </head>
 
@@ -658,6 +737,17 @@ font-size:15px;
 </footer>
 
 
+    <div class="modal" id="productModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeProduct()">×</button>
+
+<div id="productDetails"></div>
+
+</div>
+
+    </div>
 <div class="modal" id="cartModal">
 
 <div class="modal-box">
@@ -888,7 +978,7 @@ const index=books.indexOf(book);
 
 box.innerHTML+=`
 
-<div class="product">
+<div class="product" onclick="openProduct(${index})">
 
 <div class="cover">
 
@@ -907,7 +997,7 @@ onerror="this.style.display='none'">
 
 <div class="stock">موجودی: ${book.stock} عدد</div>
 
-<button class="add" onclick="add(${index})">
+<button class="add" onclick="event.stopPropagation();add(${index})">
 افزودن به سبد خرید
 </button>
 
@@ -922,6 +1012,73 @@ onerror="this.style.display='none'">
 }
 
 
+    function openProduct(index){
+
+const book=books[index];
+
+document.getElementById("productDetails").innerHTML=`
+
+<div class="product-modal-content">
+
+<div class="product-modal-cover">
+
+<img src="${book.image}" alt="${book.name}">
+
+</div>
+
+<div class="product-details">
+
+<div class="category-name">${book.category}</div>
+
+<h2>${book.name}</h2>
+
+<div class="price">${money(book.price)}</div>
+
+<div class="desc">
+یک انتخاب جذاب برای اضافه‌شدن به کتابخانه‌ی شخصی شما.
+</div>
+
+<div class="product-actions">
+
+<button class="buy-now" onclick="buyNow(${index})">
+خرید مستقیم
+</button>
+
+<button class="product-add" onclick="add(${index})">
+افزودن به سبد
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+document.getElementById("productModal").classList.add("active");
+
+}
+
+
+function closeProduct(){
+
+document.getElementById("productModal").classList.remove("active");
+
+}
+
+
+function buyNow(index){
+
+cart=[];
+
+add(index);
+
+closeProduct();
+
+openCart();
+
+}
 function add(index){
 
 const book=books[index];
