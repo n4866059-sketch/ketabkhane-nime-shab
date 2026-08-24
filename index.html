@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>کتابخانه‌ی نیمه‌شب | فروشگاه آنلاین کتاب</title>
+
+<meta name="description" content="کتابخانه‌ی نیمه‌شب؛ فروشگاه آنلاین رمان، روانشناسی، تاریخی و تخیلی.">
+<meta name="keywords" content="کتابخانه نیمه شب, خرید کتاب, رمان, روانشناسی, کتاب تاریخی">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Vazirmatn',sans-serif;
+    background:#f5eee3;
+    color:#3b2920;
+}
+
+button,input{
+    font-family:inherit;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* HEADER */
+
+header{
+    background:#3b2920;
+    color:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px #0002;
+}
+
+.topbar{
+    max-width:1200px;
+    margin:auto;
+    padding:16px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:22px;
+    font-weight:800;
+    white-space:nowrap;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#d8b894;
+    color:#3b2920;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
+}
+
+.search{
+    flex:1;
+    max-width:500px;
+    position:relative;
+}
+
+.search input{
+    width:100%;
+    border:0;
+    outline:0;
+    border-radius:30px;
+    padding:13px 48px 13px 18px;
+    background:#fff;
+    color:#333;
+    font-size:14px;
+}
+
+.search span{
+    position:absolute;
+    right:17px;
+    top:10px;
+    font-size:20px;
+}
+
+.cart-btn{
+    border:0;
+    background:#d8b894;
+    color:#3b2920;
+    padding:11px 16px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:700;
+}
+
+/* NAV */
+
+nav{
+    border-top:1px solid #ffffff18;
+}
+
+.nav-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:12px 20px;
+    font-size:14px;
+}
+
+.nav-inner a{
+    color:#f9eee2;
+    cursor:pointer;
+}
+
+.nav-inner a:hover{
+    color:#d8b894;
+}
+
+/* HERO */
+
+.hero{
+    max-width:1200px;
+    margin:30px auto;
+    padding:0 20px;
+}
+
+.hero-box{
+    min-height:390px;
+    border-radius:25px;
+    overflow:hidden;
+    position:relative;
+    background:
+        radial-gradient(circle at 75% 25%,#e1c39d55 0 8%,transparent 20%),
+        linear-gradient(135deg,#2d201a,#684b39 55%,#b99872);
+    display:flex;
+    align-items:center;
+    padding:55px;
+    color:white;
+}
+
+.hero-box:before{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    background:#f5e6ca;
+    left:8%;
+    top:12%;
+    opacity:.9;
+    box-shadow:0 0 60px #f5e6ca66;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:600px;
+}
+
+.hero-content small{
+    color:#e5c79f;
+    font-size:15px;
+}
+
+.hero-content h1{
+    font-size:45px;
+    margin:15px 0;
+}
+
+.hero-content p{
+    font-size:17px;
+    line-height:2;
+    color:#f4e9dd;
+}
+
+.hero-button{
+    margin-top:25px;
+    border:0;
+    background:#d8b894;
+    color:#34231b;
+    padding:13px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:800;
+}
+
+/* MAIN */
+
+.container{
+    max-width:1200px;
+    margin:55px auto;
+    padding:0 20px;
+}
+
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.section-title h2{
+    font-size:25px;
+}
+
+.section-title span{
+    color:#8d6c50;
+    font-size:13px;
+}
+
+/* CATEGORIES */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:60px;
+}
+
+.category{
+    background:#ead8c1;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.category:hover{
+    transform:translateY(-5px);
+    background:#dfc6a5;
+}
+
+.category-icon{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.category h3{
+    font-size:16px;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product{
+    background:#fffaf4;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px #4b332015;
+    transition:.25s;
+    border:1px solid #eadccc;
+}
+
+.product:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 30px #4b332025;
+}
+
+.book-cover{
+    height:270px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:linear-gradient(145deg,#d9c1a5,#765944);
+}
+
+.book-placeholder{
+    width:145px;
+    height:210px;
+    background:#f7efe4;
+    box-shadow:8px 10px 20px #0004;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:18px;
+    font-weight:800;
+    color:#4a3428;
+}
+
+.product-info{
+    padding:17px;
+}
+
+.product-category{
+    color:#9b795c;
+    font-size:12px;
+}
+
+.product h3{
+    margin:7px 0;
+    font-size:16px;
+    min-height:48px;
+}
+
+.price{
+    font-weight:800;
+    font-size:17px;
+    color:#5c3c29;
+}
+
+.stock{
+    color:#7c776e;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.add-btn{
+    width:100%;
+    margin-top:14px;
+    border:0;
+    background:#4b3427;
+    color:white;
+    padding:11px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.add-btn:hover{
+    background:#2e211b;
+}
+
+/* FOOTER */
+
+footer{
+    background:#30221c;
+    color:#eee;
+    margin-top:80px;
+    padding:50px 20px 25px;
+}
+
+.footer-inner{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    margin-bottom:15px;
+    color:#d8b894;
+}
+
+footer p{
+    color:#d5cbc2;
+    line-height:2;
+    font-size:14px;
+}
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid #ffffff18;
+    font-size:12px;
+    color:#aaa;
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:#0008;
+    z-index:3000;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    width:100%;
+    max-width:600px;
+    max-height:90vh;
+    overflow:auto;
+    background:#fffaf4;
+    border-radius:20px;
+    padding:25px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    left:20px;
+    top:15px;
+    border:0;
+    background:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+.modal h2{
+    margin-bottom:20px;
+}
+
+/* CART */
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #e7d9c9;
+    gap:10px;
+}
+
+.cart-item button{
+    border:0;
+    background:#ead5c0;
+    padding:6px 10px;
+    border-radius:7px;
+    cursor:pointer;
+}
+
+.cart-total{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    font-size:18px;
+    font-weight:800;
+}
+
+/* ORDER STEPS */
+
+.steps{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:25px;
+}
+
+.step{
+    width:32%;
+    text-align:center;
+    font-size:12px;
+    color:#aaa;
+}
+
+.step.active{
+    color:#5a3d2b;
+    font-weight:800;
+}
+
+.step-circle{
+    width:35px;
+    height:35px;
+    margin:0 auto 6px;
+    border-radius:50%;
+    background:#e6d6c3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.step.active .step-circle{
+    background:#5a3d2b;
+    color:white;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:7px;
+    font-size:13px;
+}
+
+.form-group input{
+    width:100%;
+    padding:13px;
+    border:1px solid #d8c7b5;
+    border-radius:10px;
+    outline:none;
+    background:white;
+}
+
+.next-btn{
+    width:100%;
+    padding:13px;
+    border:0;
+    border-radius:10px;
+    background:#4b3427;
+    color:white;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.hidden{
+    display:none;
+}
+
+.summary{
+    background:#f0e3d4;
+    border-radius:12px;
+    padding:15px;
+    line-height:2;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-box{
+        padding:35px;
+    }
+
+    .hero-content h1{
+        font-size:34px;
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+    .topbar{
+        flex-wrap:wrap;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .search{
+        order:3;
+        max-width:none;
+        flex-basis:100%;
+    }
+
+    .nav-inner{
+        overflow-x:auto;
+        justify-content:flex-start;
+        white-space:nowrap;
+    }
+
+    .hero-box{
+        min-height:350px;
+        padding:28px;
+    }
+
+    .hero-box:before{
+        width:170px;
+        height:170px;
+        left:4%;
+    }
+
+    .hero-content h1{
+        font-size:29px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .products{
+        gap:12px;
+    }
+
+    .book-cover{
+        height:220px;
+    }
+
+    .book-placeholder{
+        width:110px;
+        height:165px;
+        font-size:13px;
+    }
+
+    .product-info{
+        padding:12px;
+    }
+
+    .product h3{
+        font-size:14px;
+    }
+
+    .price{
+        font-size:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="topbar">
+
+<div class="logo">
+<div class="logo-icon">📖</div>
+<span>کتابخانه‌ی نیمه‌شب</span>
+</div>
+
+<div class="search">
+<span>🔎</span>
+<input id="searchInput" type="text" placeholder="جست‌وجوی نام کتاب...">
+</div>
+
+<button class="cart-btn" onclick="openCart()">
+🛒 سبد خرید
+<span id="cartCount">0</span>
+</button>
+
+</div>
+
+<nav>
+<div class="nav-inner">
+<a onclick="showAll()">خانه</a>
+<a onclick="filterCategory('رمان')">رمان</a>
+<a onclick="filterCategory('روانشناسی')">روانشناسی</a>
+<a onclick="filterCategory('تاریخی')">تاریخی</a>
+<a onclick="filterCategory('تخیلی')">تخیلی</a>
+<a onclick="openOrder()">ثبت سفارش</a>
+</div>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-box">
+
+<div class="hero-content">
+
+<small>به کتابخانه‌ی نیمه‌شب خوش آمدید</small>
+
+<h1>جایی برای گم‌شدن میان کلمات 🌙</h1>
+
+<p>
+رمان‌ها، کتاب‌های روانشناسی و داستان‌هایی
+که شاید درست در همان شبی که به آن‌ها نیاز داری
+پیدایشان کنی.
+</p>
+
+<button class="hero-button" onclick="document.getElementById('books').scrollIntoView()">
+مشاهده کتاب‌ها
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<main class="container">
+
+<div class="section-title">
+<h2>دسته‌بندی کتاب‌ها</h2>
+<span>کتابت را پیدا کن</span>
+</div>
+
+<div class="categories">
+
+<div class="category" onclick="filterCategory('رمان')">
+<div class="category-icon">📚</div>
+<h3>رمان</h3>
+</div>
+
+<div class="category" onclick="filterCategory('روانشناسی')">
+<div class="category-icon">🧠</div>
+<h3>روانشناسی</h3>
+</div>
+
+<div class="category" onclick="filterCategory('تاریخی')">
+<div class="category-icon">🏛️</div>
+<h3>تاریخی</h3>
+</div>
+
+<div class="category" onclick="filterCategory('تخیلی')">
+<div class="category-icon">🌌</div>
+<h3>تخیلی</h3>
+</div>
+
+</div>
+
+
+<div id="books">
+
+<div class="section-title">
+<h2>جدیدترین کتاب‌ها</h2>
+<span>کتاب‌های فروشگاه</span>
+</div>
+
+<div class="products" id="productList"></div>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<div class="footer-inner">
+
+<div>
+<h3>کتابخانه‌ی نیمه‌شب</h3>
+<p>
+فروشگاهی برای کسانی که هنوز باور دارند
+یک کتاب خوب می‌تواند حال یک شب را عوض کند.
+</p>
+</div>
+
+<div>
+<h3>دسته‌بندی‌ها</h3>
+<p>رمان</p>
+<p>روانشناسی</p>
+<p>تاریخی</p>
+<p>تخیلی</p>
+</div>
+
+<div>
+<h3>تماس با ما</h3>
+<p>📞 ۰۹۹۳۵۶۰۷۸۷۹</p>
+<p>🚚 ارسال با پست</p>
+<p>هزینه ارسال: ۱۷۰٬۰۰۰ تومان</p>
+</div>
+
+</div>
+
+<div class="copyright">
+© تمامی حقوق برای کتابخانه‌ی نیمه‌شب محفوظ است.
+</div>
+
+</footer>
+
+
+<!-- CART MODAL -->
+
+<div class="modal" id="cartModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeCart()">×</button>
+
+<h2>🛒 سبد خرید</h2>
+
+<div id="cartItems"></div>
+
+<div class="cart-total">
+<span>مجموع</span>
+<span id="cartTotal">۰ تومان</span>
+</div>
+
+<button class="next-btn" onclick="openOrder()">
+ادامه و ثبت سفارش
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ORDER MODAL -->
+
+<div class="modal" id="orderModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeOrder()">×</button>
+
+<h2>ثبت سفارش</h2>
+
+<div class="steps">
+
+<div class="step active" id="step1Label">
+<div class="step-circle">۱</div>
+شماره موبایل
+</div>
+
+<div class="step" id="step2Label">
+<div class="step-circle">۲</div>
+تأیید
+</div>
+
+<div class="step" id="step3Label">
+<div class="step-circle">۳</div>
+پرداخت
+</div>
+
+</div>
+
+
+<div id="orderStep1">
+
+<div class="form-group">
+
+<label>شماره موبایل</label>
+
+<input
+id="phone"
+type="tel"
+placeholder="مثلاً ۰۹۱۲۱۲۳۴۵۶۷"
+>
+
+</div>
+
+<button class="next-btn" onclick="sendCode()">
+ارسال کد تأیید
+</button>
+
+</div>
+
+
+<div id="orderStep2" class="hidden">
+
+<p style="margin-bottom:15px">
+کد تأیید برای شماره شما ارسال شد.
+</p>
+
+<div class="form-group">
+
+<label>کد تأیید</label>
+
+<input
+id="otp"
+type="text"
+maxlength="6"
+placeholder="کد ۶ رقمی"
+>
+
+</div>
+
+<button class="next-btn" onclick="verifyCode()">
+تأیید شماره
+</button>
+
+</div>
+
+
+<div id="orderStep3" class="hidden">
+
+<div class="summary" id="orderSummary"></div>
+
+<button class="next-btn" onclick="completeOrder()">
+ادامه به پرداخت
+</button>
+
+</div>
+
+
+<div id="orderDone" class="hidden">
+
+<div style="text-align:center;padding:20px">
+
+<div style="font-size:50px">✅</div>
+
+<h2 style="margin:15px 0">
+سفارش شما ثبت شد
+</h2>
+
+<p>
+در مرحله بعد درگاه پرداخت واقعی به سایت متصل می‌شود.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+const products = [
+
+{
+name:"تنگنا",
+category:"رمان",
+price:185000,
+stock:45
+},
+
+{
+name:"پدر سرگی",
+category:"رمان",
+price:190000,
+stock:38
+},
+
+{
+name:"بیشعوری",
+category:"روانشناسی",
+price:690000,
+stock:36
+},
+
+{
+name:"خموشان",
+category:"رمان",
+price:160000,
+stock:23
+},
+
+{
+name:"تکه‌هایی از یک کل منسجم",
+category:"روانشناسی",
+price:620000,
+stock:12
+},
+
+{
+name:"بی اجازه",
+category:"رمان",
+price:550000,
+stock:27
+},
+
+{
+name:"ارباب و بنده",
+category:"رمان",
+price:199000,
+stock:13
+},
+
+{
+name:"آخرین روز یک محکوم",
+category:"رمان",
+price:298000,
+stock:15
+},
+
+{
+name:"دختر نیستی که بفهمی",
+category:"رمان",
+price:680000,
+stock:31
+},
+
+{
+name:"قلعه‌ی مالویل",
+category:"رمان",
+price:590000,
+stock:5
+}
+
+];
+
+
+let cart=[];
+
+
+function formatPrice(price){
+
+return price.toLocaleString('fa-IR')+" تومان";
+
+}
+
+
+function renderProducts(list=products){
+
+const container=document.getElementById("productList");
+
+container.innerHTML="";
+
+if(list.length===0){
+
+container.innerHTML=
+"<p style='grid-column:1/-1;text-align:center;padding:40px'>کتابی پیدا نشد 📚</p>";
+
+return;
+
+}
+
+list.forEach((p,index)=>{
+
+container.innerHTML+=`
+
+<div class="product">
+
+<div class="book-cover">
+
+<div class="book-placeholder">
+${p.name}
+</div>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+${p.category}
+</div>
+
+<h3>${p.name}</h3>
+
+<div class="price">
+${formatPrice(p.price)}
+</div>
+
+<div class="stock">
+موجودی: ${p.stock} عدد
+</div>
+
+<button class="add-btn" onclick="addToCart(${index})">
+افزودن به سبد خرید
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+
+function addToCart(index){
+
+const product=products[index];
+
+const existing=cart.find(x=>x.name===product.name);
+
+if(existing){
+
+existing.quantity++;
+
+}else{
+
+cart.push({
+...product,
+quantity:1
+});
+
+}
+
+updateCart();
+
+alert("کتاب به سبد خرید اضافه شد 📚");
+
+}
+
+
+function updateCart(){
+
+document.getElementById("cartCount").textContent=
+cart.reduce((sum,item)=>sum+item.quantity,0);
+
+}
+
+
+function openCart(){
+
+renderCart();
+
+document.getElementById("cartModal").classList.add("active");
+
+}
+
+
+function closeCart(){
+
+document.getElementById("cartModal").classList.remove("active");
+
+}
+
+
+function renderCart(){
+
+const box=document.getElementById("cartItems");
+
+if(cart.length===0){
+
+box.innerHTML="<p>سبد خرید خالی است.</p>";
+
+document.getElementById("cartTotal").textContent="۰ تومان";
+
+return;
+
+}
+
+let total=0;
+
+box.innerHTML="";
+
+cart.forEach((item,index)=>{
+
+total+=item.price*item.quantity;
+
+box.innerHTML+=`
+
+<div class="cart-item">
+
+<div>
+<strong>${item.name}</strong>
+<br>
+<small>${formatPrice(item.price)}</small>
+</div>
+
+<div>
+
+<button onclick="changeQuantity(${index},-1)">−</button>
+
+${item.quantity}
+
+<button onclick="changeQuantity(${index},1)">+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+total+=170000;
+
+document.getElementById("cartTotal").textContent=
+formatPrice(total);
+
+}
+
+
+function changeQuantity(index,value){
+
+cart[index].quantity+=value;
+
+if(cart[index].quantity<=0){
+
+cart.splice(index,1);
+
+}
+
+updateCart();
+
+renderCart();
+
+}
+
+
+function filterCategory(category){
+
+const result=products.filter(p=>p.category===category);
+
+renderProducts(result);
+
+document.getElementById("books").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function showAll(){
+
+renderProducts(products);
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+document.getElementById("searchInput").addEventListener("input",function(){
+
+const query=this.value.trim();
+
+if(!query){
+
+renderProducts(products);
+
+return;
+
+}
+
+const result=products.filter(p=>
+p.name.includes(query) ||
+p.category.includes(query)
+);
+
+renderProducts(result);
+
+});
+
+
+function openOrder(){
+
+closeCart();
+
+document.getElementById("orderModal").classList.add("active");
+
+}
+
+
+function closeOrder(){
+
+document.getElementById("orderModal").classList.remove("active");
+
+}
+
+
+function sendCode(){
+
+const phone=document.getElementById("phone").value.trim();
+
+if(phone.length<10){
+
+alert("لطفاً شماره موبایل صحیح وارد کنید.");
+
+return;
+
+}
+
+document.getElementById("orderStep1").classList.add("hidden");
+
+document.getElementById("orderStep2").classList.remove("hidden");
+
+document.getElementById("step1Label").classList.remove("active");
+
+document.getElementById("step2Label").classList.add("active");
+
+}
+
+
+function verifyCode(){
+
+const code=document.getElementById("otp").value.trim();
+
+if(code.length<4){
+
+alert("کد تأیید را وارد کنید.");
+
+return;
+
+}
+
+document.getElementById("orderStep2").classList.add("hidden");
+
+document.getElementById("orderStep3").classList.remove("hidden");
+
+document.getElementById("step2Label").classList.remove("active");
+
+document.getElementById("step3Label").classList.add("active");
+
+createSummary();
+
+}
+
+
+function createSummary(){
+
+let booksTotal=0;
+
+let html="";
+
+cart.forEach(item=>{
+
+booksTotal+=item.price*item.quantity;
+
+html+=`
+<div>
+${item.name} × ${item.quantity}
+<br>
+${formatPrice(item.price*item.quantity)}
+</div>
+<hr>
+`;
+
+});
+
+const shipping=170000;
+
+const finalTotal=booksTotal+shipping;
+
+document.getElementById("orderSummary").innerHTML=`
+
+<strong>خلاصه سفارش</strong>
+
+<br><br>
+
+${html}
+
+<strong>هزینه ارسال:</strong>
+${formatPrice(shipping)}
+
+<br><br>
+
+<strong>مبلغ نهایی:</strong>
+${formatPrice(finalTotal)}
+
+`;
+
+}
+
+
+function completeOrder(){
+
+document.getElementById("orderStep3").classList.add("hidden");
+
+document.getElementById("orderDone").classList.remove("hidden");
+
+}
+
+
+/* INITIAL */
+
+renderProducts();
+
+</script>
+
+</body>
+</html>
