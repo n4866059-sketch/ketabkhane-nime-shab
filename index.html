@@ -7,616 +7,510 @@
 <title>کتابخانه‌ی نیمه‌شب | فروشگاه آنلاین کتاب</title>
 
 <meta name="description" content="کتابخانه‌ی نیمه‌شب؛ فروشگاه آنلاین رمان، روانشناسی، تاریخی و تخیلی.">
-<meta name="keywords" content="کتابخانه نیمه شب, خرید کتاب, رمان, روانشناسی, کتاب تاریخی">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-    font-family:'Vazirmatn',sans-serif;
-    background:#f5eee3;
-    color:#3b2920;
+font-family:'Vazirmatn',sans-serif;
+background:#f4ecdf;
+color:#3b2920;
 }
 
-button,input{
-    font-family:inherit;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-/* HEADER */
+button,input{font-family:inherit}
 
 header{
-    background:#3b2920;
-    color:#fff;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 15px #0002;
+background:#3b2920;
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 3px 15px #0003;
 }
 
-.topbar{
-    max-width:1200px;
-    margin:auto;
-    padding:16px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
+.top{
+max-width:1200px;
+margin:auto;
+padding:15px 20px;
+display:flex;
+align-items:center;
+gap:20px;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:22px;
-    font-weight:800;
-    white-space:nowrap;
-}
-
-.logo-icon{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    background:#d8b894;
-    color:#3b2920;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:23px;
+font-size:21px;
+font-weight:800;
+white-space:nowrap;
 }
 
 .search{
-    flex:1;
-    max-width:500px;
-    position:relative;
+flex:1;
+position:relative;
 }
 
 .search input{
-    width:100%;
-    border:0;
-    outline:0;
-    border-radius:30px;
-    padding:13px 48px 13px 18px;
-    background:#fff;
-    color:#333;
-    font-size:14px;
+width:100%;
+padding:13px 45px 13px 15px;
+border:0;
+border-radius:30px;
+outline:none;
+font-size:14px;
 }
 
 .search span{
-    position:absolute;
-    right:17px;
-    top:10px;
-    font-size:20px;
+position:absolute;
+right:17px;
+top:10px;
 }
 
-.cart-btn{
-    border:0;
-    background:#d8b894;
-    color:#3b2920;
-    padding:11px 16px;
-    border-radius:25px;
-    cursor:pointer;
-    font-weight:700;
+.cart{
+background:#d7b58e;
+color:#3b2920;
+border:0;
+border-radius:25px;
+padding:11px 17px;
+font-weight:bold;
+cursor:pointer;
 }
-
-/* NAV */
 
 nav{
-    border-top:1px solid #ffffff18;
+border-top:1px solid #ffffff22;
 }
 
-.nav-inner{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    padding:12px 20px;
-    font-size:14px;
+.nav{
+max-width:1200px;
+margin:auto;
+padding:11px 20px;
+display:flex;
+justify-content:center;
+gap:30px;
 }
 
-.nav-inner a{
-    color:#f9eee2;
-    cursor:pointer;
+.nav a{
+cursor:pointer;
+color:#fff;
+font-size:14px;
 }
-
-.nav-inner a:hover{
-    color:#d8b894;
-}
-
-/* HERO */
 
 .hero{
-    max-width:1200px;
-    margin:30px auto;
-    padding:0 20px;
+max-width:1200px;
+margin:30px auto;
+padding:0 20px;
 }
 
 .hero-box{
-    min-height:390px;
-    border-radius:25px;
-    overflow:hidden;
-    position:relative;
-    background:
-        radial-gradient(circle at 75% 25%,#e1c39d55 0 8%,transparent 20%),
-        linear-gradient(135deg,#2d201a,#684b39 55%,#b99872);
-    display:flex;
-    align-items:center;
-    padding:55px;
-    color:white;
+min-height:380px;
+border-radius:25px;
+padding:55px;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(circle at 78% 28%,#e5c69e 0 7%,transparent 8%),
+linear-gradient(135deg,#2b1e18,#654735,#ad8964);
+color:white;
 }
 
 .hero-box:before{
-    content:"";
-    position:absolute;
-    width:260px;
-    height:260px;
-    border-radius:50%;
-    background:#f5e6ca;
-    left:8%;
-    top:12%;
-    opacity:.9;
-    box-shadow:0 0 60px #f5e6ca66;
+content:"";
+position:absolute;
+left:8%;
+top:13%;
+width:230px;
+height:230px;
+border-radius:50%;
+background:#f4e6cf;
+box-shadow:0 0 60px #f4e6cf77;
 }
 
 .hero-content{
-    position:relative;
-    z-index:2;
-    max-width:600px;
+position:relative;
+z-index:2;
+max-width:600px;
 }
 
 .hero-content small{
-    color:#e5c79f;
-    font-size:15px;
+color:#e3c299;
 }
 
 .hero-content h1{
-    font-size:45px;
-    margin:15px 0;
+font-size:43px;
+margin:15px 0;
 }
 
 .hero-content p{
-    font-size:17px;
-    line-height:2;
-    color:#f4e9dd;
+line-height:2;
+font-size:16px;
 }
 
-.hero-button{
-    margin-top:25px;
-    border:0;
-    background:#d8b894;
-    color:#34231b;
-    padding:13px 25px;
-    border-radius:30px;
-    cursor:pointer;
-    font-weight:800;
+.hero-btn{
+margin-top:25px;
+border:0;
+background:#d7b58e;
+color:#33231b;
+padding:13px 25px;
+border-radius:30px;
+font-weight:bold;
+cursor:pointer;
 }
-
-/* MAIN */
 
 .container{
-    max-width:1200px;
-    margin:55px auto;
-    padding:0 20px;
+max-width:1200px;
+margin:50px auto;
+padding:0 20px;
 }
 
-.section-title{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:25px;
+.title{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:22px;
 }
 
-.section-title h2{
-    font-size:25px;
+.title h2{
+font-size:25px;
 }
-
-.section-title span{
-    color:#8d6c50;
-    font-size:13px;
-}
-
-/* CATEGORIES */
 
 .categories{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin-bottom:60px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-bottom:60px;
 }
 
 .category{
-    background:#ead8c1;
-    border-radius:18px;
-    padding:25px;
-    text-align:center;
-    cursor:pointer;
-    transition:.25s;
+background:#e7d4bb;
+border-radius:18px;
+padding:25px;
+text-align:center;
+cursor:pointer;
+transition:.2s;
 }
 
 .category:hover{
-    transform:translateY(-5px);
-    background:#dfc6a5;
+transform:translateY(-5px);
 }
 
-.category-icon{
-    font-size:32px;
-    margin-bottom:10px;
+.category div{
+font-size:32px;
+margin-bottom:8px;
 }
-
-.category h3{
-    font-size:16px;
-}
-
-/* PRODUCTS */
 
 .products{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
 }
 
 .product{
-    background:#fffaf4;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 5px 20px #4b332015;
-    transition:.25s;
-    border:1px solid #eadccc;
+background:#fffaf4;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 20px #4b332015;
+border:1px solid #eadccc;
+transition:.2s;
 }
 
 .product:hover{
-    transform:translateY(-6px);
-    box-shadow:0 12px 30px #4b332025;
+transform:translateY(-5px);
 }
 
-.book-cover{
-    height:270px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    background:linear-gradient(145deg,#d9c1a5,#765944);
+.cover{
+height:285px;
+background:#e4d0b6;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
 }
 
-.book-placeholder{
-    width:145px;
-    height:210px;
-    background:#f7efe4;
-    box-shadow:8px 10px 20px #0004;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:18px;
-    font-weight:800;
-    color:#4a3428;
+.cover img{
+width:100%;
+height:100%;
+object-fit:contain;
+display:block;
 }
 
-.product-info{
-    padding:17px;
+.info{
+padding:17px;
 }
 
-.product-category{
-    color:#9b795c;
-    font-size:12px;
+.category-name{
+font-size:12px;
+color:#9a7757;
 }
 
-.product h3{
-    margin:7px 0;
-    font-size:16px;
-    min-height:48px;
+.info h3{
+font-size:16px;
+margin:7px 0;
+min-height:48px;
 }
 
 .price{
-    font-weight:800;
-    font-size:17px;
-    color:#5c3c29;
+font-size:17px;
+font-weight:800;
+color:#5a3b28;
 }
 
 .stock{
-    color:#7c776e;
-    font-size:12px;
-    margin-top:5px;
+font-size:12px;
+color:#777;
+margin-top:5px;
 }
 
-.add-btn{
-    width:100%;
-    margin-top:14px;
-    border:0;
-    background:#4b3427;
-    color:white;
-    padding:11px;
-    border-radius:10px;
-    cursor:pointer;
+.add{
+width:100%;
+border:0;
+background:#4b3427;
+color:white;
+padding:11px;
+border-radius:10px;
+cursor:pointer;
+margin-top:13px;
 }
-
-.add-btn:hover{
-    background:#2e211b;
-}
-
-/* FOOTER */
 
 footer{
-    background:#30221c;
-    color:#eee;
-    margin-top:80px;
-    padding:50px 20px 25px;
+margin-top:80px;
+background:#30221c;
+color:white;
+padding:50px 20px 25px;
 }
 
-.footer-inner{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:40px;
+.footer{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:40px;
 }
 
 footer h3{
-    margin-bottom:15px;
-    color:#d8b894;
+color:#d7b58e;
+margin-bottom:15px;
 }
 
 footer p{
-    color:#d5cbc2;
-    line-height:2;
-    font-size:14px;
+color:#ddd;
+line-height:2;
+font-size:14px;
 }
 
-.copyright{
-    text-align:center;
-    margin-top:40px;
-    padding-top:20px;
-    border-top:1px solid #ffffff18;
-    font-size:12px;
-    color:#aaa;
+.copy{
+text-align:center;
+border-top:1px solid #ffffff22;
+margin-top:35px;
+padding-top:20px;
+font-size:12px;
+color:#aaa;
 }
-
-/* MODAL */
 
 .modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:#0008;
-    z-index:3000;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
+display:none;
+position:fixed;
+inset:0;
+background:#0008;
+z-index:3000;
+align-items:center;
+justify-content:center;
+padding:20px;
 }
 
 .modal.active{
-    display:flex;
+display:flex;
 }
 
 .modal-box{
-    width:100%;
-    max-width:600px;
-    max-height:90vh;
-    overflow:auto;
-    background:#fffaf4;
-    border-radius:20px;
-    padding:25px;
-    position:relative;
+background:#fffaf4;
+width:100%;
+max-width:600px;
+max-height:90vh;
+overflow:auto;
+border-radius:20px;
+padding:25px;
+position:relative;
 }
 
 .close{
-    position:absolute;
-    left:20px;
-    top:15px;
-    border:0;
-    background:none;
-    font-size:25px;
-    cursor:pointer;
+position:absolute;
+left:18px;
+top:12px;
+border:0;
+background:none;
+font-size:27px;
+cursor:pointer;
 }
-
-.modal h2{
-    margin-bottom:20px;
-}
-
-/* CART */
 
 .cart-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 0;
-    border-bottom:1px solid #e7d9c9;
-    gap:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+border-bottom:1px solid #eadccc;
 }
 
 .cart-item button{
-    border:0;
-    background:#ead5c0;
-    padding:6px 10px;
-    border-radius:7px;
-    cursor:pointer;
+border:0;
+background:#e5d1b9;
+padding:5px 10px;
+border-radius:7px;
+cursor:pointer;
 }
 
-.cart-total{
-    display:flex;
-    justify-content:space-between;
-    margin-top:20px;
-    font-size:18px;
-    font-weight:800;
+.total{
+display:flex;
+justify-content:space-between;
+font-weight:bold;
+font-size:18px;
+margin-top:20px;
 }
 
-/* ORDER STEPS */
+.next{
+width:100%;
+border:0;
+background:#4b3427;
+color:white;
+padding:13px;
+border-radius:10px;
+margin-top:18px;
+cursor:pointer;
+}
 
 .steps{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:25px;
+display:flex;
+justify-content:space-between;
+margin:20px 0;
 }
 
 .step{
-    width:32%;
-    text-align:center;
-    font-size:12px;
-    color:#aaa;
+text-align:center;
+font-size:12px;
+color:#aaa;
+width:33%;
 }
 
 .step.active{
-    color:#5a3d2b;
-    font-weight:800;
+color:#5a3b28;
+font-weight:bold;
 }
 
-.step-circle{
-    width:35px;
-    height:35px;
-    margin:0 auto 6px;
-    border-radius:50%;
-    background:#e6d6c3;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.circle{
+width:35px;
+height:35px;
+border-radius:50%;
+background:#e5d4bf;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto auto 5px;
 }
 
-.step.active .step-circle{
-    background:#5a3d2b;
-    color:white;
+.step.active .circle{
+background:#5a3b28;
+color:white;
 }
 
-.form-group{
-    margin-bottom:15px;
+.form{
+margin-bottom:15px;
 }
 
-.form-group label{
-    display:block;
-    margin-bottom:7px;
-    font-size:13px;
+.form label{
+display:block;
+font-size:13px;
+margin-bottom:7px;
 }
 
-.form-group input{
-    width:100%;
-    padding:13px;
-    border:1px solid #d8c7b5;
-    border-radius:10px;
-    outline:none;
-    background:white;
-}
-
-.next-btn{
-    width:100%;
-    padding:13px;
-    border:0;
-    border-radius:10px;
-    background:#4b3427;
-    color:white;
-    cursor:pointer;
-    margin-top:10px;
+.form input{
+width:100%;
+padding:13px;
+border:1px solid #d8c7b5;
+border-radius:10px;
+outline:none;
 }
 
 .hidden{
-    display:none;
+display:none;
 }
 
 .summary{
-    background:#f0e3d4;
-    border-radius:12px;
-    padding:15px;
-    line-height:2;
+background:#f0e2d2;
+padding:15px;
+border-radius:12px;
+line-height:2;
 }
 
-/* MOBILE */
-
 @media(max-width:900px){
-    .products{
-        grid-template-columns:repeat(2,1fr);
-    }
 
-    .categories{
-        grid-template-columns:repeat(2,1fr);
-    }
+.products{
+grid-template-columns:repeat(2,1fr);
+}
 
-    .hero-box{
-        padding:35px;
-    }
+.categories{
+grid-template-columns:repeat(2,1fr);
+}
 
-    .hero-content h1{
-        font-size:34px;
-    }
+.footer{
+grid-template-columns:1fr;
+}
 
-    .footer-inner{
-        grid-template-columns:1fr;
-    }
 }
 
 @media(max-width:600px){
-    .topbar{
-        flex-wrap:wrap;
-    }
 
-    .logo{
-        font-size:18px;
-    }
+.top{
+flex-wrap:wrap;
+}
 
-    .search{
-        order:3;
-        max-width:none;
-        flex-basis:100%;
-    }
+.logo{
+font-size:18px;
+}
 
-    .nav-inner{
-        overflow-x:auto;
-        justify-content:flex-start;
-        white-space:nowrap;
-    }
+.search{
+order:3;
+flex-basis:100%;
+}
 
-    .hero-box{
-        min-height:350px;
-        padding:28px;
-    }
+.nav{
+overflow-x:auto;
+justify-content:flex-start;
+white-space:nowrap;
+}
 
-    .hero-box:before{
-        width:170px;
-        height:170px;
-        left:4%;
-    }
+.hero-box{
+padding:30px;
+}
 
-    .hero-content h1{
-        font-size:29px;
-    }
+.hero-content h1{
+font-size:30px;
+}
 
-    .hero-content p{
-        font-size:14px;
-    }
+.hero-box:before{
+width:160px;
+height:160px;
+}
 
-    .products{
-        gap:12px;
-    }
+.products{
+gap:12px;
+}
 
-    .book-cover{
-        height:220px;
-    }
+.cover{
+height:220px;
+}
 
-    .book-placeholder{
-        width:110px;
-        height:165px;
-        font-size:13px;
-    }
+.info{
+padding:12px;
+}
 
-    .product-info{
-        padding:12px;
-    }
+.info h3{
+font-size:14px;
+}
 
-    .product h3{
-        font-size:14px;
-    }
+.price{
+font-size:15px;
+}
 
-    .price{
-        font-size:15px;
-    }
 }
 </style>
 </head>
@@ -625,34 +519,35 @@ footer p{
 
 <header>
 
-<div class="topbar">
+<div class="top">
 
 <div class="logo">
-<div class="logo-icon">📖</div>
-<span>کتابخانه‌ی نیمه‌شب</span>
+🌙📖 کتابخانه‌ی نیمه‌شب
 </div>
 
 <div class="search">
 <span>🔎</span>
-<input id="searchInput" type="text" placeholder="جست‌وجوی نام کتاب...">
+<input id="search" placeholder="جست‌وجوی نام کتاب...">
 </div>
 
-<button class="cart-btn" onclick="openCart()">
-🛒 سبد خرید
-<span id="cartCount">0</span>
+<button class="cart" onclick="openCart()">
+🛒 سبد خرید (<span id="count">0</span>)
 </button>
 
 </div>
 
 <nav>
-<div class="nav-inner">
-<a onclick="showAll()">خانه</a>
-<a onclick="filterCategory('رمان')">رمان</a>
-<a onclick="filterCategory('روانشناسی')">روانشناسی</a>
-<a onclick="filterCategory('تاریخی')">تاریخی</a>
-<a onclick="filterCategory('تخیلی')">تخیلی</a>
-<a onclick="openOrder()">ثبت سفارش</a>
+
+<div class="nav">
+
+<a onclick="allBooks()">خانه</a>
+<a onclick="filterBooks('رمان')">رمان</a>
+<a onclick="filterBooks('روانشناسی')">روانشناسی</a>
+<a onclick="filterBooks('تاریخی')">تاریخی</a>
+<a onclick="filterBooks('تخیلی')">تخیلی</a>
+
 </div>
+
 </nav>
 
 </header>
@@ -670,11 +565,10 @@ footer p{
 
 <p>
 رمان‌ها، کتاب‌های روانشناسی و داستان‌هایی
-که شاید درست در همان شبی که به آن‌ها نیاز داری
-پیدایشان کنی.
+که شاید درست در همان شبی که به آن‌ها نیاز داری پیدایشان کنی.
 </p>
 
-<button class="hero-button" onclick="document.getElementById('books').scrollIntoView()">
+<button class="hero-btn" onclick="scrollBooks()">
 مشاهده کتاب‌ها
 </button>
 
@@ -687,30 +581,29 @@ footer p{
 
 <main class="container">
 
-<div class="section-title">
+<div class="title">
 <h2>دسته‌بندی کتاب‌ها</h2>
-<span>کتابت را پیدا کن</span>
 </div>
 
 <div class="categories">
 
-<div class="category" onclick="filterCategory('رمان')">
-<div class="category-icon">📚</div>
+<div class="category" onclick="filterBooks('رمان')">
+<div>📚</div>
 <h3>رمان</h3>
 </div>
 
-<div class="category" onclick="filterCategory('روانشناسی')">
-<div class="category-icon">🧠</div>
+<div class="category" onclick="filterBooks('روانشناسی')">
+<div>🧠</div>
 <h3>روانشناسی</h3>
 </div>
 
-<div class="category" onclick="filterCategory('تاریخی')">
-<div class="category-icon">🏛️</div>
+<div class="category" onclick="filterBooks('تاریخی')">
+<div>🏛️</div>
 <h3>تاریخی</h3>
 </div>
 
-<div class="category" onclick="filterCategory('تخیلی')">
-<div class="category-icon">🌌</div>
+<div class="category" onclick="filterBooks('تخیلی')">
+<div>🌌</div>
 <h3>تخیلی</h3>
 </div>
 
@@ -719,12 +612,11 @@ footer p{
 
 <div id="books">
 
-<div class="section-title">
+<div class="title">
 <h2>جدیدترین کتاب‌ها</h2>
-<span>کتاب‌های فروشگاه</span>
 </div>
 
-<div class="products" id="productList"></div>
+<div class="products" id="products"></div>
 
 </div>
 
@@ -733,12 +625,11 @@ footer p{
 
 <footer>
 
-<div class="footer-inner">
+<div class="footer">
 
 <div>
 <h3>کتابخانه‌ی نیمه‌شب</h3>
 <p>
-فروشگاهی برای کسانی که هنوز باور دارند
 یک کتاب خوب می‌تواند حال یک شب را عوض کند.
 </p>
 </div>
@@ -760,14 +651,12 @@ footer p{
 
 </div>
 
-<div class="copyright">
+<div class="copy">
 © تمامی حقوق برای کتابخانه‌ی نیمه‌شب محفوظ است.
 </div>
 
 </footer>
 
-
-<!-- CART MODAL -->
 
 <div class="modal" id="cartModal">
 
@@ -779,12 +668,15 @@ footer p{
 
 <div id="cartItems"></div>
 
-<div class="cart-total">
+<div class="total">
+
 <span>مجموع</span>
-<span id="cartTotal">۰ تومان</span>
+
+<span id="total">۰ تومان</span>
+
 </div>
 
-<button class="next-btn" onclick="openOrder()">
+<button class="next" onclick="openOrder()">
 ادامه و ثبت سفارش
 </button>
 
@@ -792,8 +684,6 @@ footer p{
 
 </div>
 
-
-<!-- ORDER MODAL -->
 
 <div class="modal" id="orderModal">
 
@@ -805,94 +695,81 @@ footer p{
 
 <div class="steps">
 
-<div class="step active" id="step1Label">
-<div class="step-circle">۱</div>
+<div class="step active" id="s1">
+<div class="circle">۱</div>
 شماره موبایل
 </div>
 
-<div class="step" id="step2Label">
-<div class="step-circle">۲</div>
-تأیید
+<div class="step" id="s2">
+<div class="circle">۲</div>
+تأیید شماره
 </div>
 
-<div class="step" id="step3Label">
-<div class="step-circle">۳</div>
+<div class="step" id="s3">
+<div class="circle">۳</div>
 پرداخت
 </div>
 
 </div>
 
 
-<div id="orderStep1">
+<div id="step1">
 
-<div class="form-group">
+<div class="form">
 
 <label>شماره موبایل</label>
 
-<input
-id="phone"
-type="tel"
-placeholder="مثلاً ۰۹۱۲۱۲۳۴۵۶۷"
->
+<input id="phone" type="tel" placeholder="۰۹۱۲۱۲۳۴۵۶۷">
 
 </div>
 
-<button class="next-btn" onclick="sendCode()">
+<button class="next" onclick="sendCode()">
 ارسال کد تأیید
 </button>
 
 </div>
 
 
-<div id="orderStep2" class="hidden">
+<div id="step2" class="hidden">
 
-<p style="margin-bottom:15px">
-کد تأیید برای شماره شما ارسال شد.
-</p>
+<p>کد تأیید ارسال شد.</p>
 
-<div class="form-group">
+<div class="form">
 
 <label>کد تأیید</label>
 
-<input
-id="otp"
-type="text"
-maxlength="6"
-placeholder="کد ۶ رقمی"
->
+<input id="otp" maxlength="6" placeholder="کد ۶ رقمی">
 
 </div>
 
-<button class="next-btn" onclick="verifyCode()">
+<button class="next" onclick="verifyCode()">
 تأیید شماره
 </button>
 
 </div>
 
 
-<div id="orderStep3" class="hidden">
+<div id="step3" class="hidden">
 
-<div class="summary" id="orderSummary"></div>
+<div class="summary" id="summary"></div>
 
-<button class="next-btn" onclick="completeOrder()">
+<button class="next" onclick="finishOrder()">
 ادامه به پرداخت
 </button>
 
 </div>
 
 
-<div id="orderDone" class="hidden">
+<div id="done" class="hidden">
 
 <div style="text-align:center;padding:20px">
 
 <div style="font-size:50px">✅</div>
 
-<h2 style="margin:15px 0">
-سفارش شما ثبت شد
-</h2>
+<h2>سفارش ثبت شد</h2>
 
-<p>
-در مرحله بعد درگاه پرداخت واقعی به سایت متصل می‌شود.
+<p style="margin-top:10px">
+درگاه پرداخت واقعی در مرحله اتصال به سیستم پرداخت فعال خواهد شد.
 </p>
 
 </div>
@@ -906,137 +783,132 @@ placeholder="کد ۶ رقمی"
 
 <script>
 
-const products = [
+const books=[
 
 {
 name:"تنگنا",
 category:"رمان",
 price:185000,
-stock:45
+stock:45,
+image:"tangna.jpg"
 },
 
 {
 name:"پدر سرگی",
 category:"رمان",
 price:190000,
-stock:38
+stock:38,
+image:"pedar-sergi.jpg"
 },
 
 {
 name:"بیشعوری",
 category:"روانشناسی",
 price:690000,
-stock:36
+stock:36,
+image:"bisheori.jpg"
 },
 
 {
 name:"خموشان",
 category:"رمان",
 price:160000,
-stock:23
+stock:23,
+image:"khamoshan.jpg"
 },
 
 {
 name:"تکه‌هایی از یک کل منسجم",
 category:"روانشناسی",
 price:620000,
-stock:12
+stock:12,
+image:"tekkehaye-yek-kol.jpg"
 },
 
 {
-name:"بی اجازه",
+name:"بی‌اجازه",
 category:"رمان",
 price:550000,
-stock:27
+stock:27,
+image:"bi-ejaze.jpg"
 },
 
 {
 name:"ارباب و بنده",
 category:"رمان",
 price:199000,
-stock:13
+stock:13,
+image:"arbab-o-bande.jpg"
 },
 
 {
 name:"آخرین روز یک محکوم",
 category:"رمان",
 price:298000,
-stock:15
+stock:15,
+image:"akharin-rooz.jpg"
 },
 
 {
 name:"دختر نیستی که بفهمی",
 category:"رمان",
 price:680000,
-stock:31
+stock:31,
+image:"dokhtar-nisti.jpg"
 },
 
 {
 name:"قلعه‌ی مالویل",
 category:"رمان",
 price:590000,
-stock:5
+stock:5,
+image:"ghale-malvil.jpg"
 }
 
 ];
 
-
 let cart=[];
 
 
-function formatPrice(price){
+function money(number){
 
-return price.toLocaleString('fa-IR')+" تومان";
-
-}
-
-
-function renderProducts(list=products){
-
-const container=document.getElementById("productList");
-
-container.innerHTML="";
-
-if(list.length===0){
-
-container.innerHTML=
-"<p style='grid-column:1/-1;text-align:center;padding:40px'>کتابی پیدا نشد 📚</p>";
-
-return;
+return number.toLocaleString("fa-IR")+" تومان";
 
 }
 
-list.forEach((p,index)=>{
 
-container.innerHTML+=`
+function render(list=books){
+
+const box=document.getElementById("products");
+
+box.innerHTML="";
+
+list.forEach(book=>{
+
+const index=books.indexOf(book);
+
+box.innerHTML+=`
 
 <div class="product">
 
-<div class="book-cover">
+<div class="cover">
 
-<div class="book-placeholder">
-${p.name}
+<img src="${book.image}" alt="${book.name}"
+onerror="this.style.display='none'">
+
 </div>
 
-</div>
+<div class="info">
 
-<div class="product-info">
+<div class="category-name">${book.category}</div>
 
-<div class="product-category">
-${p.category}
-</div>
+<h3>${book.name}</h3>
 
-<h3>${p.name}</h3>
+<div class="price">${money(book.price)}</div>
 
-<div class="price">
-${formatPrice(p.price)}
-</div>
+<div class="stock">موجودی: ${book.stock} عدد</div>
 
-<div class="stock">
-موجودی: ${p.stock} عدد
-</div>
-
-<button class="add-btn" onclick="addToCart(${index})">
+<button class="add" onclick="add(${index})">
 افزودن به سبد خرید
 </button>
 
@@ -1051,36 +923,36 @@ ${formatPrice(p.price)}
 }
 
 
-function addToCart(index){
+function add(index){
 
-const product=products[index];
+const book=books[index];
 
-const existing=cart.find(x=>x.name===product.name);
+const found=cart.find(item=>item.name===book.name);
 
-if(existing){
+if(found){
 
-existing.quantity++;
+found.qty++;
 
 }else{
 
 cart.push({
-...product,
-quantity:1
+...book,
+qty:1
 });
 
 }
 
-updateCart();
+updateCount();
 
 alert("کتاب به سبد خرید اضافه شد 📚");
 
 }
 
 
-function updateCart(){
+function updateCount(){
 
-document.getElementById("cartCount").textContent=
-cart.reduce((sum,item)=>sum+item.quantity,0);
+document.getElementById("count").textContent=
+cart.reduce((sum,item)=>sum+item.qty,0);
 
 }
 
@@ -1109,7 +981,7 @@ if(cart.length===0){
 
 box.innerHTML="<p>سبد خرید خالی است.</p>";
 
-document.getElementById("cartTotal").textContent="۰ تومان";
+document.getElementById("total").textContent="۰ تومان";
 
 return;
 
@@ -1121,7 +993,7 @@ box.innerHTML="";
 
 cart.forEach((item,index)=>{
 
-total+=item.price*item.quantity;
+total+=item.price*item.qty;
 
 box.innerHTML+=`
 
@@ -1130,16 +1002,16 @@ box.innerHTML+=`
 <div>
 <strong>${item.name}</strong>
 <br>
-<small>${formatPrice(item.price)}</small>
+${money(item.price)}
 </div>
 
 <div>
 
-<button onclick="changeQuantity(${index},-1)">−</button>
+<button onclick="changeQty(${index},-1)">−</button>
 
-${item.quantity}
+${item.qty}
 
-<button onclick="changeQuantity(${index},1)">+</button>
+<button onclick="changeQty(${index},1)">+</button>
 
 </div>
 
@@ -1151,34 +1023,45 @@ ${item.quantity}
 
 total+=170000;
 
-document.getElementById("cartTotal").textContent=
-formatPrice(total);
+document.getElementById("total").textContent=money(total);
 
 }
 
 
-function changeQuantity(index,value){
+function changeQty(index,value){
 
-cart[index].quantity+=value;
+cart[index].qty+=value;
 
-if(cart[index].quantity<=0){
+if(cart[index].qty<=0){
 
 cart.splice(index,1);
 
 }
 
-updateCart();
+updateCount();
 
 renderCart();
 
 }
 
 
-function filterCategory(category){
+function filterBooks(category){
 
-const result=products.filter(p=>p.category===category);
+render(books.filter(book=>book.category===category));
 
-renderProducts(result);
+scrollBooks();
+
+}
+
+
+function allBooks(){
+
+render(books);
+
+}
+
+
+function scrollBooks(){
 
 document.getElementById("books").scrollIntoView({
 behavior:"smooth"
@@ -1187,36 +1070,24 @@ behavior:"smooth"
 }
 
 
-function showAll(){
+document.getElementById("search").addEventListener("input",function(){
 
-renderProducts(products);
+const value=this.value.trim();
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+if(!value){
 
-}
-
-
-document.getElementById("searchInput").addEventListener("input",function(){
-
-const query=this.value.trim();
-
-if(!query){
-
-renderProducts(products);
+render();
 
 return;
 
 }
 
-const result=products.filter(p=>
-p.name.includes(query) ||
-p.category.includes(query)
+render(
+books.filter(book=>
+book.name.includes(value) ||
+book.category.includes(value)
+)
 );
-
-renderProducts(result);
 
 });
 
@@ -1249,13 +1120,13 @@ return;
 
 }
 
-document.getElementById("orderStep1").classList.add("hidden");
+document.getElementById("step1").classList.add("hidden");
 
-document.getElementById("orderStep2").classList.remove("hidden");
+document.getElementById("step2").classList.remove("hidden");
 
-document.getElementById("step1Label").classList.remove("active");
+document.getElementById("s1").classList.remove("active");
 
-document.getElementById("step2Label").classList.add("active");
+document.getElementById("s2").classList.add("active");
 
 }
 
@@ -1272,45 +1143,41 @@ return;
 
 }
 
-document.getElementById("orderStep2").classList.add("hidden");
+document.getElementById("step2").classList.add("hidden");
 
-document.getElementById("orderStep3").classList.remove("hidden");
+document.getElementById("step3").classList.remove("hidden");
 
-document.getElementById("step2Label").classList.remove("active");
+document.getElementById("s2").classList.remove("active");
 
-document.getElementById("step3Label").classList.add("active");
+document.getElementById("s3").classList.add("active");
 
-createSummary();
+makeSummary();
 
 }
 
 
-function createSummary(){
+function makeSummary(){
 
-let booksTotal=0;
+let total=0;
 
 let html="";
 
 cart.forEach(item=>{
 
-booksTotal+=item.price*item.quantity;
+total+=item.price*item.qty;
 
 html+=`
-<div>
-${item.name} × ${item.quantity}
+${item.name} × ${item.qty}
 <br>
-${formatPrice(item.price*item.quantity)}
-</div>
+${money(item.price*item.qty)}
 <hr>
 `;
 
 });
 
-const shipping=170000;
+total+=170000;
 
-const finalTotal=booksTotal+shipping;
-
-document.getElementById("orderSummary").innerHTML=`
+document.getElementById("summary").innerHTML=`
 
 <strong>خلاصه سفارش</strong>
 
@@ -1318,33 +1185,30 @@ document.getElementById("orderSummary").innerHTML=`
 
 ${html}
 
-<strong>هزینه ارسال:</strong>
-${formatPrice(shipping)}
+هزینه ارسال:
+${money(170000)}
 
 <br><br>
 
-<strong>مبلغ نهایی:</strong>
-${formatPrice(finalTotal)}
+<strong>مبلغ نهایی: ${money(total)}</strong>
 
 `;
 
 }
 
 
-function completeOrder(){
+function finishOrder(){
 
-document.getElementById("orderStep3").classList.add("hidden");
+document.getElementById("step3").classList.add("hidden");
 
-document.getElementById("orderDone").classList.remove("hidden");
+document.getElementById("done").classList.remove("hidden");
 
 }
 
 
-/* INITIAL */
-
-renderProducts();
+render();
 
 </script>
 
 </body>
-</html>
+    </html>
