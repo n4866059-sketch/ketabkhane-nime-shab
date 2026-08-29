@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پنل مدیریت | کتابخانه‌ی نیمه‌شب</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4eee6;
+      color: #3b2618;
+    }
+
+    header {
+      background: #3b2618;
+      color: #fff8ef;
+      padding: 25px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #5b3825;
+    }
+
+    .form {
+      display: grid;
+      gap: 12px;
+    }
+
+    input, select, button {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #d5c4b5;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #5b3825;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .book {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 15px;
+    }
+
+    .book button {
+      margin-top: 10px;
+      margin-left: 5px;
+    }
+
+    .delete {
+      background: #8b3a3a;
+    }
+
+    .empty {
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>📚 پنل مدیریت کتابخانه‌ی نیمه‌شب</h1>
+  <p>مدیریت کتاب‌ها</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>➕ افزودن کتاب</h2>
+
+    <div class="form">
+      <input id="bookName" type="text" placeholder="نام کتاب">
+
+      <input id="bookPrice" type="number" placeholder="قیمت به تومان">
+
+      <input id="bookStock" type="number" placeholder="موجودی">
+
+      <select id="bookCategory">
+        <option value="رمان">رمان</option>
+        <option value="روانشناسی">روانشناسی</option>
+        <option value="تاریخی">تاریخی</option>
+        <option value="تخیلی">تخیلی</option>
+      </select>
+
+      <input id="bookImage" type="text" placeholder="نام فایل عکس کتاب">
+
+      <button onclick="addBook()">افزودن کتاب</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📚 کتاب‌های موجود</h2>
+
+    <div id="booksList"></div>
+  </div>
+
+</div>
+
+<script>
+
+  let books = JSON.parse(localStorage.getItem("ketabkhaneBooks")) || [];
+
+  function saveBooks() {
+    localStorage.setItem("ketabkhaneBooks", JSON.stringify(books));
+  }
+
+  function addBook() {
+
+    const name = document.getElementById("bookName").value.trim();
+    const price = document.getElementById("bookPrice").value;
+    const stock = document.getElementById("bookStock").value;
+    const category = document.getElementById("bookCategory").value;
+    const image = document.getElementById("bookImage").value.trim();
+
+    if (!name || !price || !stock) {
+      alert("لطفاً نام، قیمت و موجودی را وارد کنید.");
+      return;
+    }
+
+    books.push({
+      name: name,
+      price: Number(price),
+      stock: Number(stock),
+      category: category,
+      image: image
+    });
+
+    saveBooks();
+    showBooks();
+
+    document.getElementById("bookName").value = "";
+    document.getElementById("bookPrice").value = "";
+    document.getElementById("bookStock").value = "";
+    document.getElementById("bookImage").value = "";
+  }
+
+  function deleteBook(index) {
+
+    if (confirm("این کتاب حذف شود؟")) {
+      books.splice(index, 1);
+      saveBooks();
+      showBooks();
+    }
+
+  }
+
+  function showBooks() {
+
+    const list = document.getElementById("booksList");
+
+    if (books.length === 0) {
+      list.innerHTML = '<p class="empty">هنوز کتابی اضافه نشده است.</p>';
+      return;
+    }
+
+    list.innerHTML = "";
+
+    books.forEach((book, index) => {
+
+      const div = document.createElement("div");
+
+      div.className = "book";
+
+      div.innerHTML = `
+        <strong>${book.name}</strong>
+        <br>
+        قیمت: ${book.price.toLocaleString("fa-IR")} تومان
+        <br>
+        موجودی: ${book.stock}
+        <br>
+        دسته‌بندی: ${book.category}
+        <br>
+        ${book.image ? "عکس: " + book.image : ""}
+        <br>
+        <button onclick="deleteBook(${index})" class="delete">
+          حذف کتاب
+        </button>
+      `;
+
+      list.appendChild(div);
+
+    });
+  }
+
+  showBooks();
+
+</script>
+
+</body>
+  </html>
